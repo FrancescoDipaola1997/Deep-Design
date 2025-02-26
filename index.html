@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il mio E-Commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Benvenuto nel mio negozio online!</h1>
-    <p>Presto aggiungeremo i nostri fantastici prodotti.</p>
+<body class="bg-gray-100 text-gray-900">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold text-center mb-6">Negozio Online</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Prodotto 1 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="prodotto1.jpg" alt="Prodotto 1" class="w-full h-40 object-cover rounded">
+                <h2 class="text-xl font-semibold mt-2">Maglietta Bianca</h2>
+                <p class="text-gray-700">Maglietta 100% cotone di alta qualità.</p>
+                <p class="text-lg font-bold mt-2">€19.99</p>
+                <button class="snipcart-add-item bg-blue-500 text-white px-4 py-2 mt-3 rounded"
+                    data-item-id="1"
+                    data-item-name="Maglietta Bianca"
+                    data-item-price="19.99"
+                    data-item-url="/"
+                    data-item-image="prodotto1.jpg">
+                    Aggiungi al Carrello
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Snipcart -->
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="M2U1OTMwZGQtYjNkZC00YjYyLWJmZjktOGFkOGIzZDBhOGY4NjM4NzYyMDU4MzM0MzA5NDAw"></div>
 </body>
 </html>
