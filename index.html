@@ -3,68 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio E-Commerce</title>
+    <title>Deep Design - E-commerce di Oggetti di Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <div class="container mx-auto p-6">
-        <h1 class="text-3xl font-bold text-center mb-6">Negozio Online</h1>
-
-        <!-- Griglia prodotti -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
-            <!-- Prodotto 1 -->
-            <div class="bg-white p-4 rounded-lg shadow-md w-full max-w-xs">
-                <img src="prodotto1.jpg" alt="Maglietta Bianca" class="w-full h-40 object-cover rounded">
-                <h2 class="text-xl font-semibold mt-2">Maglietta Bianca</h2>
-                <p class="text-gray-700">Maglietta 100% cotone di alta qualità.</p>
-                <p class="text-lg font-bold mt-2">€19.99</p>
-                <button class="snipcart-add-item bg-blue-500 text-white px-4 py-2 mt-3 rounded"
-                    data-item-id="1"
-                    data-item-name="Maglietta Bianca"
-                    data-item-price="19.99"
-                    data-item-url="/"
-                    data-item-image="prodotto1.jpg">
-                    Aggiungi al Carrello
-                </button>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header con logo -->
+    <header class="bg-orange-600 text-white py-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div>
+                <img src="logo.png" alt="Logo Deep Design" class="w-32">
             </div>
-
-            <!-- Prodotto 2 -->
-            <div class="bg-white p-4 rounded-lg shadow-md w-full max-w-xs">
-                <img src="felpa.jpg" alt="Felpa Nera" class="w-full h-40 object-cover rounded">
-                <h2 class="text-xl font-semibold mt-2">Felpa Nera</h2>
-                <p class="text-gray-700">Felpa invernale calda e comoda.</p>
-                <p class="text-lg font-bold mt-2">€39.99</p>
-                <button class="snipcart-add-item bg-blue-500 text-white px-4 py-2 mt-3 rounded"
-                    data-item-id="2"
-                    data-item-name="Felpa Nera"
-                    data-item-price="39.99"
-                    data-item-url="/"
-                    data-item-image="felpa.jpg">
-                    Aggiungi al Carrello
-                </button>
-            </div>
-
-            <!-- Prodotto 3 -->
-            <div class="bg-white p-4 rounded-lg shadow-md w-full max-w-xs">
-                <img src="scarpe.jpg" alt="Scarpe Sportive" class="w-full h-40 object-cover rounded">
-                <h2 class="text-xl font-semibold mt-2">Scarpe Sportive</h2>
-                <p class="text-gray-700">Scarpe leggere e resistenti, perfette per lo sport.</p>
-                <p class="text-lg font-bold mt-2">€49.99</p>
-                <button class="snipcart-add-item bg-blue-500 text-white px-4 py-2 mt-3 rounded"
-                    data-item-id="3"
-                    data-item-name="Scarpe Sportive"
-                    data-item-price="49.99"
-                    data-item-url="/"
-                    data-item-image="scarpe.jpg">
-                    Aggiungi al Carrello
-                </button>
-            </div>
+            <!-- Navigazione -->
+            <nav class="space-x-6 text-lg font-semibold">
+                <a href="#ufficio" class="hover:text-gray-300">Ufficio</a>
+                <a href="#camera-da-letto" class="hover:text-gray-300">Camera da letto</a>
+                <a href="#soggiorno" class="hover:text-gray-300">Soggiorno</a>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <!-- Snipcart -->
-    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
-    <div hidden id="snipcart" data-api-key="M2U1OTMwZGQtYjNkZC00YjYyLWJmZjktOGFkOGIzZDBhOGY4NjM4NzYyMDU4MzM0MzA5NDAw"></div>
+    <!-- Sezione principale -->
+    <main class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center text-orange-600 mb-12">Esplora i nostri prodotti di Design</h1>
+
+        <!-- Categorie -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="prodotti">
+            
+            <!-- Categoria Ufficio -->
+            <section id="ufficio" class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-orange-600 text-center mb-4">Ufficio</h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="prodotto-ufficio1.jpg" alt="Scrivania elegante" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-xl font-semibold mt-2">Scrivania Elegante</h3>
+                        <p class="text-gray-700">Scrivania in legno massiccio con finitura moderna.</p>
+                        <p class="text-lg font-bold mt-2">€299.99</p>
+                        <button class="bg-orange-600 text-white px-6 py-2 mt-3 rounded-md hover:bg-orange-700">Aggiungi al Carrello</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="prodotto-ufficio2.jpg" alt="Lampada da scrivania" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-xl font-semibold mt-2">Lampada da Scrivania</h3>
+                        <p class="text-gray-700">Lampada da scrivania con design minimalista e luce regolabile.</p>
+                        <p class="text-lg font-bold mt-2">€129.99</p>
+                        <button class="bg-orange-600 text-white px-6 py-2 mt-3 rounded-md hover:bg-orange-700">Aggiungi al Carrello</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categoria Camera da Letto -->
+            <section id="camera-da-letto" class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-orange-600 text-center mb-4">Camera da Letto</h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="prodotto-camera1.jpg" alt="Comodino moderno" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-xl font-semibold mt-2">Comodino Moderno</h3>
+                        <p class="text-gray-700">Comodino in legno con design elegante e pratico.</p>
+                        <p class="text-lg font-bold mt-2">€149.99</p>
+                        <button class="bg-orange-600 text-white px-6 py-2 mt-3 rounded-md hover:bg-orange-700">Aggiungi al Carrello</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="prodotto-camera2.jpg" alt="Lampada da notte" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-xl font-semibold mt-2">Lampada da Notte</h3>
+                        <p class="text-gray-700">Lampada da notte con base in ceramica e luce soffusa.</p>
+                        <p class="text-lg font-bold mt-2">€79.99</p>
+                        <button class="bg-orange-600 text-white px-6 py-2 mt-3 rounded-md hover:bg-orange-700">Aggiungi al Carrello</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categoria Soggiorno -->
+            <section id="soggiorno" class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-orange-600 text-center mb-4">Soggiorno</h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="prodotto-soggiorno1.jpg" alt="Divano design moderno" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-xl font-semibold mt-2">Divano Design Moderno</h3>
+                        <p class="text-gray-700">Divano comodo e moderno, perfetto per ogni soggiorno.</p>
+                        <p class="text-lg font-bold mt-2">€499.99</p>
+                        <button class="bg-orange-600 text-white px-6 py-2 mt-3 rounded-md hover:bg-orange-700">Aggiungi al Carrello</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <img src="prodotto-soggiorno2.jpg" alt="Tavolino in legno" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-xl font-semibold mt-2">Tavolino in Legno</h3>
+                        <p class="text-gray-700">Tavolino elegante e robusto in legno massiccio.</p>
+                        <p class="text-lg font-bold mt-2">€249.99</p>
+                        <button class="bg-orange-600 text-white px-6 py-2 mt-3 rounded-md hover:bg-orange-700">Aggiungi al Carrello</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-orange-600 text-white py-4 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Deep Design. Tutti i diritti riservati.</p>
+            <p><a href="#" class="hover:underline">Privacy Policy</a> | <a href="#" class="hover:underline">Termini e Condizioni</a></p>
+        </div>
+    </footer>
+
 </body>
 </html>
