@@ -137,6 +137,14 @@ a.more {
   position: relative;
   padding-bottom: 50px;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Transizione fluida */
+}
+.product-section .product-item:hover {
+  background-color: #ea611d; /* Sfondo arancione al passaggio del mouse */
+}
+.product-section .product-item:hover .product-title,
+.product-section .product-item:hover .product-price {
+  color: #ffffff; /* Colore del testo bianco al passaggio del mouse */
 }
 .product-section .product-item:hover .product-thumbnail {
   top: -25px;
